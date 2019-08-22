@@ -7,3 +7,9 @@ export default function Display() {
         </div>
     );
 }
+
+const mapStateToProps = state => {
+    
+}
+
+export default connect(mapStateToProps)(Display);
