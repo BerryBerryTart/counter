@@ -1,2 +1,2 @@
-##Simple Counter App
+# Simple Counter App
 Using React and Redux. Totally not overkill.
