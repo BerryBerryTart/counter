@@ -1,4 +1,4 @@
-import {INCREMENT, DECREMENT, DOUBLE} from "./actionTypes";
+import {INCREMENT, DECREMENT, DOUBLE, HALF, RESET} from "./actionTypes";
 
 export const increment = () => ({
     type: INCREMENT
@@ -10,4 +10,12 @@ export const decrement = () => ({
 
 export const double = () => ({
     type: DOUBLE
+})
+
+export const half = () => ({
+    type: HALF
+})
+
+export const reset = () => ({
+    type: RESET
 })

@@ -1,11 +1,12 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { double } from "../redux/actions"
+import { double, half } from "../redux/actions"
 
-function Multiply ({double}) {
+function Multiply ({double, half}) {
     return (
         <div>
         <button onClick={double}>Double (x2)</button>
+        <button onClick={half}>Half (x0.5)</button>
         </div>
     );
 };
@@ -13,7 +14,7 @@ function Multiply ({double}) {
 const mapDispatchToProps = (dispatch) => {
     return {
         double: () => dispatch(double()),
-        dispatch
+        half: () => dispatch(half())
     }
 };
 

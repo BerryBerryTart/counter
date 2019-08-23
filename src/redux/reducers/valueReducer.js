@@ -1,10 +1,10 @@
-import {INCREMENT, DECREMENT, DOUBLE} from "../actionTypes";
+import {INCREMENT, DECREMENT, DOUBLE, HALF} from "../actionTypes";
 
 const initialState = {
     value: 0
 }
 
-export default function(state = initialState, action){
+export default function valueReducer(state = initialState, action){
     switch (action.type){
         case INCREMENT: {
             return {
@@ -19,6 +19,11 @@ export default function(state = initialState, action){
         case DOUBLE: {
             return {
                 value: state.value * 2
+            }
+        }
+        case HALF: {
+            return {
+                value: Math.floor(state.value / 2)
             }
         }
         default:

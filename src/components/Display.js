@@ -22,7 +22,6 @@ const mapDispatchToProps = (dispatch) => {
     return {
         increment: () => dispatch(increment()),
         decrement: () => dispatch(decrement()),
-        dispatch
     }
 };
 
