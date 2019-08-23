@@ -1,4 +1,6 @@
 import { combineReducers } from "redux";
 import valueReducer from "./valueReducer";
 
-export default combineReducers({valueReducer});
+ const rootReducer = combineReducers({valueReducer});
+
+export default rootReducer;

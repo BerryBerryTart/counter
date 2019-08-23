@@ -1,20 +1,25 @@
-import {INCREMENT, DECREMENT} from "../actionTypes";
+import {INCREMENT, DECREMENT, DOUBLE} from "../actionTypes";
 
 const initialState = {
-    value: 0;
+    value: 0
 }
 
 export default function(state = initialState, action){
     switch (action.type){
         case INCREMENT: {
-            const {value} = action.payload;
-            return
-                value + 1
+            return {
+                value: state.value + 1
+            };
         }
         case DECREMENT: {
-            const {value} = action.payload;
-            return
-                value - 1
+            return {
+                value: state.value - 1
+            };
+        }
+        case DOUBLE: {
+            return {
+                value: state.value * 2
+            }
         }
         default:
             return state;
