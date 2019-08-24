@@ -1,29 +1,19 @@
 import React from 'react';
 import { connect } from "react-redux";
-import { increment, decrement } from "../redux/actions"
 
-function Display ({value, increment, decrement}) {
+function Display ({value}) {
     return (
         <div>
-        <p>{value}</p>
-        <button onClick={increment}>Increment</button>
-        <button onClick={decrement}>Decrement</button>
+        <p class="text-center">{value}</p>
         </div>
     );
 };
 
-const mapStateToProps = (state) => {
+function mapStateToProps (state, ownProps){
+    const {valueReducer} = state
     return {
-        value: state.valueReducer.value
+        value: valueReducer.value
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
-    return {
-        increment: () => dispatch(increment()),
-        decrement: () => dispatch(decrement()),
-        dispatch
-    }
-};
-
-export default connect(mapStateToProps, mapDispatchToProps)(Display);
+export default connect(mapStateToProps)(Display);

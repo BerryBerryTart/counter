@@ -1,13 +1,21 @@
 import React from 'react';
 import { connect } from "react-redux";
+import { increment, decrement } from "../redux/actions"
 
-function Controls() {
+function Controls ({increment, decrement}) {
     return (
-        <div>
-        <button>Increment</button>
-        <button>Decrement</button>
+        <div class="row">
+        <button class="col-sm" onClick={increment}>Increment</button>
+        <button class="col-sm" onClick={decrement}>Decrement</button>
         </div>
     );
-}
+};
 
-export default connect(null)(Controls);
+const mapDispatchToProps = (dispatch) => {
+    return {
+        increment: () => dispatch(increment()),
+        decrement: () => dispatch(decrement()),
+    }
+};
+
+export default connect(null, mapDispatchToProps)(Controls);
