@@ -1,7 +1,6 @@
 import { combineReducers } from "redux";
 import valueReducer from "./valueReducer";
-import resetReducer from "./resetReducer"
 
- const rootReducer = combineReducers({valueReducer, resetReducer});
+const reducer = combineReducers({valueReducer});
 
-export default rootReducer;
+export default reducer;

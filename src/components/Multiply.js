@@ -4,9 +4,9 @@ import { double, half } from "../redux/actions"
 
 function Multiply ({double, half}) {
     return (
-        <div>
-        <button onClick={double}>Double (x2)</button>
-        <button onClick={half}>Half (x0.5)</button>
+        <div class="row">
+        <button class="col-sm" onClick={double}>Double (x2)</button>
+        <button class="col-sm" onClick={half}>Half (x0.5)</button>
         </div>
     );
 };

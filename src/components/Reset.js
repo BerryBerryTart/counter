@@ -4,8 +4,8 @@ import { reset } from "../redux/actions"
 
 function Reset ({ reset }) {
     return (
-        <div>
-        <button onClick={reset}>Reset</button>
+        <div class="row">
+        <button class="col-sm" onClick={reset}>Reset</button>
         </div>
     );
 };
